@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Employee Application</h1>
+{% url 'empForm' %}
+<form action="{% url 'empForm' %}" method="post">
+    {% csrf_token %}
+    {{ appForm }}
+    <button>Submit</button>
+</form>
+</body>
+</html>
